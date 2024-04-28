@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Personale</title>
+    <link rel="stylesheet" href="stylehome.css">
+</head>
+<body>
+    <header>
+        <h1>Il Mio Portfolio Personale</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio disegni</a></li>
+                <li><a href="fotografia.html">portfolio Foto</a></li>
+                <li><a href="scritti.html">Scritti</a></li>
+                <li><a href="about.html">mi presento</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="riquadro-centrale">
+        <main>
+            <section id="featured">
+                <section id="featured-drawing">
+                    <h2>Disegni in Evidenza</h2>
+                    <div class="drawing-container">
+                        <img id="drawing" src="immagini_portfolio/immagine1.jpg" alt="Disegno in Evidenza">
+                    </div>
+                    <p><a href="portfolio.html" class="more-link">Visualizza di più</a></p>
+
+                </section>
+                <section id="featured-photos">
+                    <h2>Fotografie in Evidenza</h2>
+                    <div class="photo-container">
+                        <img id="photo" src="torino/torino.jpeg" alt="Fotografia in Evidenza">
+                    </div>
+                    <p><a href="fotografia.html" class="more-link">Visualizza di più</a></p>
+
+                </section>
+            </section>
+            <div class="video-container">
+                <video id="video" width="640" height="360" controls>
+                    <source src="WhatsApp Video 2024-04-25 at 18.04.31.mp4" type="video/mp4">
+                </video>
+            </div>
+        </main>
+        <section id="contact">
+            <h2>Contattami</h2>
+            <p>Se desideri saperne di più sui miei disegni o vuoi commissionare un lavoro, non esitare a contattarmi!</p>
+            <p>Email: coppolakimberly56@gmail.com</p>
+        </section>
+        <footer>
+        <p>&copy; 2024  Tutti i diritti riservati.</p>
+    </footer>
+    </div>
+  
+    <script src="slideshow.js"></script>
+    <script>
+        // Cambio automatico delle immagini ogni 2 secondi
+        setInterval(function() {
+            nextDrawing();
+            nextPhoto();
+        }, 2000);
+    </script>
+</body>
+</html>
