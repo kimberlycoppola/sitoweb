@@ -132,7 +132,7 @@ footer {
 }
 
 .riquadro-centrale {
-    background-color: rgba(255, 255, 255, 0.912);
+    background-color:rgb(225, 204, 220);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Aggiunge un'ombra leggera */
