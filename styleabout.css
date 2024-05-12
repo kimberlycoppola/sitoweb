@@ -1,4 +1,3 @@
-
 /* Reset CSS */
 html, body, header, main, footer, h1, h2, p, ul, li, a, img {
     margin: 0;
@@ -104,6 +103,9 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 section {
@@ -113,6 +115,7 @@ section {
     padding: 20px;
     border-radius: 15px; /* Bordo arrotondato */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra */
+    width: 100%; /* Occupa tutta la larghezza del contenitore */
 }
 
 section h2 {
@@ -141,4 +144,19 @@ footer {
     text-align: center;
     margin: 20px auto; /* Centra il riquadro */
     max-width: 800px; /* Imposta la larghezza massima */
+}
+
+/* Media query per dispositivi con larghezza massima di 768px (ad es. telefoni) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px; /* Riduci la dimensione del titolo */
+    }
+
+    nav ul li {
+        margin-right: 10px; /* Riduci il margine tra gli elementi del menu */
+    }
+
+    section {
+        padding: 10px; /* Riduci il padding nelle sezioni */
+    }
 }
