@@ -95,3 +95,11 @@ footer {
     background-color: #8d7758;
     color: #fff;
 }
+/* Esempio di Media Query per schermi con larghezza massima di 768px (ad es. telefoni) */
+@media (max-width: 768px) {
+    /* Stili specifici per dispositivi mobili */
+    body {
+        font-size: 14px; /* Esempio: riduci la dimensione del testo per dispositivi mobili */
+    }
+    /* Altri stili per dispositivi mobili... */
+}
