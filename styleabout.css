@@ -1,88 +1,144 @@
-/* Reset di alcuni stili predefiniti */
-body, h1, h2, p, ul, li {
+
+/* Reset CSS */
+html, body, header, main, footer, h1, h2, p, ul, li, a, img {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Stili globali */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f8f8f8;
+    color: #fff;
+    background: url('sfondo.jpg') repeat; /* Immagine di sfondo stelle */
+    animation: moveStars 100s linear infinite; /* Animazione del movimento delle stelle */
+}
+
+@keyframes moveStars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1000px 1500px; /* Valore elevato per un movimento più ampio */
+    }
 }
 
 header {
-    background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
+    animation: fadeInDown 1s ease; /* Animazione di dissolvenza in entrata */
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombra testo */
+    animation: neonGlow 2s infinite alternate; /* Animazione di glow */
+}
+
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #d2e050, 0 0 70px #8cafee, 0 0 80px hsl(71, 69%, 64%), 0 0 100px #3a9cd5, 0 0 150px #4fe2d3;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 100px #3c92ae, 0 0 150px #c4e858, 0 0 200px #c4dd57, 0 0 300px hsl(61, 77%, 70%);
+    }
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 20px;
+    animation: fadeIn 1s ease-in-out; /* Animazione di dissolvenza in entrata */
 }
 
-a {
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.main-content {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px;
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Sfondo semi-trasparente al passaggio del mouse */
+    animation: pulse 0.5s infinite alternate; /* Animazione di pulsazione */
+    transform-origin: center;
 }
 
-.sidebar {
-    width: 30%;
-    float: left;
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+main {
     padding: 20px;
-    background-color: #f1f1f1;
+}
+
+section {
+    color:#000000;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease; /* Animazione di dissolvenza in entrata */
+    padding: 20px;
+    border-radius: 15px; /* Bordo arrotondato */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra */
+}
+
+section h2 {
+    color: black; /* Rosso arancione */
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+    animation: rainbowText 5s infinite; /* Animazione testo arcobaleno */
 }
 
 footer {
-    text-align: center;
-    clear: both;
-    padding: 10px;
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.8); /* Nero semi-trasparente */
     color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-bottom-left-radius: 15px; /* Bordo arrotondato */
+    border-bottom-right-radius: 15px; /* Bordo arrotondato */
+    animation: fadeInUp 1s ease; /* Animazione di dissolvenza in entrata */
 }
 
-/* Stili per dispositivi mobili */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        float: none;
-        margin-bottom: 20px;
-    }
-}
-
-/* Media query per schermi di dimensioni medie */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .main-content {
-        margin: 20px auto;
-        width: 70%;
-    }
-
-    .sidebar {
-        width: 30%;
-        float: left;
-    }
-}
-
-/* Media query per schermi più grandi */
-@media (min-width: 1025px) {
-    .main-content {
-        margin: 20px auto;
-        width: 60%;
-    }
-
-    .sidebar {
-        width: 30%;
-        float: left;
-    }
+.riquadro-centrale {
+    background-color: rgb(225, 204, 220);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); /* Aggiunge un'ombra leggera */
+    text-align: center;
+    margin: 20px auto; /* Centra il riquadro */
+    max-width: 800px; /* Imposta la larghezza massima */
 }
